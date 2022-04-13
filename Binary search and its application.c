@@ -16,6 +16,7 @@ int main(){
     return 0;
 }
 
+/*find the index. if not exisit, return -1*/
 int binarySearch(int *arr, int len, int target){
     int l = 0;
     int r = len - 1;
@@ -35,6 +36,7 @@ int binarySearch(int *arr, int len, int target){
     return -1;
 }
 
+/*find the index. if not exisit, return the smaller number*/
 int binarySearchII(int *arr, int len, int target){
     int l = 0;
     int r = len - 1;
@@ -54,6 +56,7 @@ int binarySearchII(int *arr, int len, int target){
     return l-1;
 }
 
+/*find the root*/
 int rootInt(int n){
     int l = 1;
     int r = n;
@@ -72,6 +75,7 @@ int rootInt(int n){
     return l - 1;
 }
 
+/*find the root. return float rounding to 1*/
 float rootFloat(int n){
     int l = 10;
     int r = n * 10;
@@ -91,6 +95,7 @@ float rootFloat(int n){
     return (float)(l-1)/10;
 }
 
+/*find the root. return float rounding to 2*/
 float rootFloatII(int n){
     int l = 100;
     int r = n * 100;
