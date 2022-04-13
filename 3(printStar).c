@@ -12,6 +12,11 @@ int main(){
     return 0;
 }
 
+/* 
+    *
+    **
+    ***
+*/
 void printTriangle(int const n){
     for(int i = 0; i < n; i++){
         for(int j = 0; j < i + 1; j++){
@@ -21,6 +26,14 @@ void printTriangle(int const n){
     }
     printf("\n");
 }
+
+/* 
+
+  *
+ * *
+* * *
+
+*/
 
 void printPyramid(int const n){
     for(int i = 0; i < n; i++){
@@ -36,6 +49,16 @@ void printPyramid(int const n){
     }
     printf("\n");
 }
+
+/*
+
+  *
+ * *
+* * *
+ * *
+  *
+
+*/
 
 void printDiamod(int const n){
     for(int i = 0; i < n; i++){
