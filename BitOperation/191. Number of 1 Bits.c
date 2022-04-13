@@ -13,7 +13,7 @@ void howManyOneinBinary(int n){
 }
 
 void howManyOneinBinaryII(int n){
-    /*Brian Kernighan¡¦s algorithm*/
+    /*Brian KernighanÂ¡Â¦s algorithm*/
     int ans = 0;
 
     while(n > 0){
