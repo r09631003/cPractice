@@ -35,8 +35,6 @@ int main(){
     pushBack(&h, 6);
 
     insertNodeBySequence(&h, 1, 1);
-
-
     traverse(&h);
 }
 
@@ -45,14 +43,14 @@ void insertNodeBySequence(NODE **h, int N, int x){
     else{
         NODE *c = *h;
 
-        N = N - 2; /*go to the N-1 position*/
+        N = N - 2;                      /*the pointer should stand on the n-1 node*/
 
         while(c && N > 0){
             c = c->next;
             N--;
         }
 
-        if(!c) return;
+        if(!c) return;                  /*add on the 1 ~ Length + 1, if the N is greater to (Length + 1), then return */
 
         NODE *n = (NODE *)malloc(sizeof(NODE));
         n->val = x;
@@ -71,16 +69,18 @@ void deleteNodeBySequence(NODE **h, int N){
     else{
         NODE *c = *h;
 
-        N = N - 2; /*the pointer should stand on the n-1 node*/
+        N = N - 2;                      /*the pointer should stand on the n-1 node*/
 
         while(c && N > 0){
             c = c->next;
             N--;
         }
 
-        if(!c || !(c->next)) return;
+        if(!c || !(c->next)) return;        /*add on the 1 ~ Length, if the N is greater to (Length), then return */
 
-        printf("%d\n", c->val);
+        NODE *tmp = c->next;
+        c->next = c->next->next;
+        free(tmp);
 
     }
 }
