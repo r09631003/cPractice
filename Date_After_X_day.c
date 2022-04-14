@@ -11,16 +11,16 @@ int main(){
     int year1, month1, day1;
     int year2, month2, day2;
 
-    printf("½Ð¿é¤J¤é´Á1:");
+    printf("è«‹è¼¸å…¥æ—¥æœŸ1:");
     scanf("%d-%d-%d", &year1, &month1, &day1);
 
-    printf("\n½Ð¿é¤J¤é´Á2:");
+    printf("\nè«‹è¼¸å…¥æ—¥æœŸ2:");
     scanf("%d-%d-%d", &year2, &month2, &day2);
 
     int diff = 0;
     cntDayDifference(&year1, &month1, &day1, &year2, &month2, &day2, &diff);
 
-    printf("¤Ñ¼Æ®t²§: %d\n", diff);
+    printf("å¤©æ•¸å·®ç•°: %d\n", diff);
 
     return 0;
 }
