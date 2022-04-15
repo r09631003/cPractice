@@ -1,4 +1,4 @@
-/*¸sÁp3ÃD-1*/
+/*Â¸sÃp3ÃƒD-1*/
 #include<stdio.h>
 
 void phisonFitst(int *, int);
