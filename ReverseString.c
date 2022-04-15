@@ -19,7 +19,7 @@ int main(){
     return 0;
 }
 
-"I am a boy" -> "boy a am I"
+/* "I am a boy" -> "boy a am I" */
 void reverseWordsInString(char *s){
     int len = strlen(s);
 
