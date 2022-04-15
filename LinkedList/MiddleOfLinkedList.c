@@ -12,6 +12,7 @@ void traverse(NODE **);
 NODE* midddle(NODE **);
 NODE* middleII(NODE **);
 
+int maxValInPrior(NODE **);
 
 int main(){
     NODE *h = NULL;
@@ -27,6 +28,22 @@ int main(){
     NODE *m = middleII(&h);
 
     traverse(&m);
+}
+
+/* Find the max Value in the prior half part of the linked list */
+int maxValInPrior(NODE **h){
+    NODE *slow = *h;
+    NODE *fast = *h;
+    int maxValue = (*h)->val;
+
+    while(fast && fast->next){
+        if(slow->val > maxValue)
+            maxValue = slow->val;
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+
+    return maxValue;
 }
 
 
