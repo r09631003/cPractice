@@ -25,6 +25,9 @@ void popFront(NODE **);
 void deleteNodeByPos(NODE **); /*Delete by Given Address*/
 void deleteNodeBySequence(NODE **, int); /*Delete by Nst*/
 
+/* create linked list by given array */
+void create(NODE **, int *, int);
+
 
 int main(){
     NODE *h = NULL;
@@ -36,6 +39,23 @@ int main(){
 
     insertNodeBySequence(&h, 1, 1);
     traverse(&h);
+}
+
+void create(NODE **head, int *arr, int len){
+    NODE *prev;
+
+    for(int i = 0; i < len; i++){
+        NODE *cur = (NODE *)malloc(sizeof(NODE));
+        cur->val = arr[i];
+
+        if(i == 0)
+            *head = cur;
+        else
+            prev->next = cur;
+
+        cur->next = NULL;
+        prev = cur;
+    }
 }
 
 void insertNodeBySequence(NODE **h, int N, int x){
