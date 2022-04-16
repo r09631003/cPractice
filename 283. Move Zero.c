@@ -1,17 +1,15 @@
 #include<stdio.h>
 
-
-
-/* The problem is similar to the Leetcode. 283 Question*/
-/* Move the 0 to the post part of the array */
-/* Regardless the sequence of the other numbers */
-
 void swap(int *a, int *b){
     int tmp = *a;
     *a = *b;
     *b = tmp;
 }
 
+
+/* The problem is similar to the Leetcode. 283 Question*/
+/* Move the 0 to the post part of the array */
+/* Regardless the sequence of the other numbers */
 void moveZero(int *arr, int len){
     int i = 0;
     int j = len - 1;
@@ -22,6 +20,22 @@ void moveZero(int *arr, int len){
         while(arr[j] == 0)
             j--;
         if(i < j) swap(&arr[i], &arr[j]);
+    }
+}
+
+/* Should consider the original order */
+void moveZeroe(int* nums, int numsSize){
+    int i = 0;
+    int j = 0; 
+
+    while(i < numsSize){
+        if(nums[i] == 0)
+            i++;
+        else{
+            swap(&nums[i], &nums[j]);
+            j++;
+            i++;
+        }
     }
 }
 
