@@ -15,6 +15,7 @@ void isMultipleof16(int n){
 }
 
 /*給你一個unsigned short(0~65535)，問換算成16進制後四個值是不是一樣，是回傳1，否則0。例如：0xFFFF return 1, 0xAAAB return 0*/
+/* Naive method: use the mask left shift four time and check */
 bool is16theSame(unsigned short n){
     /*use the mask to extract the last 4 digits*/
     int mask = n&15;
@@ -28,4 +29,16 @@ bool is16theSame(unsigned short n){
     }
 
     return n == 0;
+}
+
+/*給你一個unsigned short(0~65535)，問換算成16進制後四個值是不是一樣，是回傳1，否則0。例如：0xFFFF return 1, 0xAAAB return 0*/
+/* Left shift the mask directly. */
+
+bool is16theSameII(unsigned short n){
+    /*use the mask to extract the last 4 digits*/
+    uint16_t mask = n & 15;
+    
+    mask = (mask << 12) + (mask << 8) + (mask << 4) + mask;
+
+    return !(mask ^ n);
 }
