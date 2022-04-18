@@ -7,9 +7,6 @@
 /*Naive Method*/
 void findHighestBit(unsigned int n){
     int x = 31;
-    int shift = -1;
-    uint32_t ans = 0;
-
     uint32_t mask = 1 << 31;
 
     while(mask > 0){
