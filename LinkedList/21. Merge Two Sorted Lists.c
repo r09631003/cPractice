@@ -12,6 +12,7 @@ void insertBack(NODE **, int);
 void traverse(NODE **);
 
 NODE *mergeTwoSortedLinked(NODE *, NODE *);
+NODE *mergeTwoLinkedByReccursion(NODE *h1, NODE *h2)
 
 int main(){
     NODE *h1 = NULL;
@@ -43,6 +44,25 @@ int main(){
     return 0;
 }
 
+/* By recurrsion method. */
+NODE *mergeTwoLinkedByReccursion(NODE *h1, NODE *h2){
+    if(!h1) return h2;
+    else if(!h2) return h1;
+
+    NODE *res = NULL;
+
+    if(h1->val <= h2->val){
+        res = h1;
+        res->next = mergeTwoLinkedByReccursion(h1->next, h2);
+    }
+
+    else{
+        res = h2;
+        res->next = mergeTwoLinkedByReccursion(h1, h2->next);
+    }
+}
+
+/* By while loop(traverse) method. */
 NODE *mergeTwoSortedLinked(NODE *list1, NODE *list2){
     NODE *res = (NODE *)malloc(sizeof(NODE));
     NODE *cur = res;
