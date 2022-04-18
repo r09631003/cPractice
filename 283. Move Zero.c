@@ -24,7 +24,7 @@ void moveZero(int *arr, int len){
 }
 
 /* Should consider the original order */
-void moveZeroe(int* nums, int numsSize){
+void moveZeroII(int* nums, int numsSize){
     int i = 0;
     int j = 0; 
 
