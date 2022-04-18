@@ -10,15 +10,14 @@ void findHighestBit(unsigned int n){
     int shift = -1;
     uint32_t ans = 0;
 
-    while(x > 0){
-        if(n & 1) shift = (31-x);
-        n>>=1;
-        x--;
+    uint32_t mask = 1 << 31;
+
+    while(mask > 0){
+        if(n & mask) break;
+        mask >>= 1;
     }
-
-    if(shift!=-1) ans = setBit1(ans, shift);
-
-    printf("%ud\n", ans);
+    
+    printf("The highest bit is %d\n", mask);
 }
 
 
