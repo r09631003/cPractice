@@ -40,7 +40,7 @@ void abs(int n){
     printf("ABS(%d) = %d\n", n, (~n)+1);
 }
 
-void abs(int n){
+void absII(int n){
     /* Notice that if all the negative number (32th == 1) right shift 32 will always be -1 */
     /* Remember it!!! */
     /* (n >> 31) ^ n equals to the 1's complement operation */
