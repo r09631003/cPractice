@@ -100,7 +100,7 @@ void strcpy(const char *from, char *to){
 }
 
 void reverseString(char * str, int len){
-   for(int i = 0; i < len; i++){
+   for(int i = 0; i < len / 2; i++){
         swapChar(&str[i], &str[len - i - 1]);
    }
 }
