@@ -16,7 +16,7 @@ int main(){
     return 0;
 }
 
-/*find the index. if not exisit, return -1*/
+/* Find the index. if not exisit, return -1 */
 int binarySearch(int *arr, int len, int target){
     int l = 0;
     int r = len - 1;
@@ -36,10 +36,10 @@ int binarySearch(int *arr, int len, int target){
     return -1;
 }
 
-/*find the 1, 0 bounadry*/
-/*given the sorted array that contains only 1 & 0*/
+/* Find the 1, 0 bounadry */
+/* Given the sorted array that contains only 1 & 0 */
 /* {1,1,1,0,0} */
-/* you should find the first 0 index in this array*/
+/* You should find the first 0 index in this array */
 int binarySearchIII(int *arr, int len){
     int l = 0;
     int r = len - 1;
@@ -59,7 +59,7 @@ int binarySearchIII(int *arr, int len){
     return (arr[l-1] == 1)?-1:0;
 }
 
-/*find the index. if not exisit, return the smaller number*/
+/* Find the index. if not exisit, return the smaller number */
 int binarySearchII(int *arr, int len, int target){
     int l = 0;
     int r = len - 1;
@@ -79,7 +79,7 @@ int binarySearchII(int *arr, int len, int target){
     return l-1;
 }
 
-/*find the root*/
+/* Find the root */
 int rootInt(int n){
     int l = 1;
     int r = n;
@@ -98,7 +98,7 @@ int rootInt(int n){
     return l - 1;
 }
 
-/*find the root. return float rounding to 1*/
+/* Find the root. return float rounding to 1 */
 float rootFloat(int n){
     int l = 10;
     int r = n * 10;
@@ -118,7 +118,7 @@ float rootFloat(int n){
     return (float)(l-1)/10;
 }
 
-/*find the root. return float rounding to 2*/
+/* Find the root. return float rounding to 2 */
 float rootFloatII(int n){
     int l = 100;
     int r = n * 100;
