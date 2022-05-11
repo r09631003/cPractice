@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-/*Leetcode 136. Single Number*/
+/* Leetcode 136. Single Number */
 int singleNumber(int* nums, int numsSize){
     int tmp = nums[0];
 
@@ -11,7 +11,7 @@ int singleNumber(int* nums, int numsSize){
     return tmp;
 }
 
-/*Leetcode Single Number III*/
+/* Leetcode Single Number III */
 
 void singleNumberIII(int *nums, int numsSize){
     int tmp = nums[0];
@@ -20,18 +20,18 @@ void singleNumberIII(int *nums, int numsSize){
     ans[0] = 0;
     ans[1] = 0;
 
-    /*XOR all the number in array. will get the number represents the diff between the 2 unique number*/
+    /* XOR all the number in array. will get the number represents the diff between the 2 unique number */
     for(int i = 1; i < numsSize; i++){
         tmp ^= nums[i];
     }
 
-    /*the mask will find the last 1. in tmp, and the 1. represent the last different bits in the two unique number*/
+    /* The mask will find the last 1. in tmp, and the 1. represent the last different bits in the two unique number */
     tmp &= (-tmp);
 
 
-    /*divide the nums into 2 part: has / has no same bit with mask*/
+    /* Divide the nums into 2 part: has / has no same bit with mask */
     for(int i = 0; i < numsSize; i++){
-        if(nums[i] & tmp)        /*if nums & mask == 0, it means that it has no same bit with mask*/
+        if(nums[i] & tmp)        /* If nums & mask == 0, it means that it has no same bit with mask */
             ans[0] ^= nums[i];
         else
             ans[1] ^= nums[i];
