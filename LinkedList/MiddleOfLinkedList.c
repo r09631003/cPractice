@@ -47,7 +47,10 @@ int maxValInPrior(NODE **h){
 }
 
 
-/*If even: Return prior middle*/
+/* If even: Return prior middle */
+/* 1, 2, 3, 4, 5, 6 */
+/* Return 3 */
+
 NODE* middleII(NODE **h){
     if(!(*h)) return;
 
@@ -66,7 +69,10 @@ NODE* middleII(NODE **h){
     return slow;
 }
 
-/*If even: Return post middle*/
+/* If even: Return post middle */
+/* 1, 2, 3, 4, 5, 6 */
+/* Return 4 */
+
 NODE* midddle(NODE **h){
     if(!(*h)) return;
 
