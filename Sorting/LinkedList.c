@@ -51,7 +51,7 @@ void selectionSortLinkedList(NODE **h){
 
     while(c){
         
-        /*First, set the current node to be the min NODE*/
+        /* First, set the current node to be the min NODE */
         NODE *minNode = c;
         
         /* r is stand for the rear node */
@@ -88,14 +88,14 @@ void bubbleSort(NODE **h){
 }
 
 void mergeSort(NODE **h){
-    /* if the node is NULL or it is just one node */
+    /* If the node is NULL or it is just one node */
     if( !(*h) || !((*h)->next) ) return;
 
-    /* create the prior and the post node, which save the prior/post part of the linked list */
+    /* Create the prior and the post node, which save the prior/post part of the linked list */
     NODE *prior = NULL;
     NODE *post = NULL;
     
-    /* same as the middle of linked list(return the prior middle) */
+    /* Same as the middle of linked list(return the prior middle) */
     spilitLinked(h, &prior, &post);
     
     mergeSort(&prior);
@@ -104,7 +104,7 @@ void mergeSort(NODE **h){
     *h = merge(prior, post);
 }
 
-/* use the recursive method */
+/* Use the recursive method */
 NODE* merge(NODE* a, NODE* b){
     if (a == NULL) {
         return b;
@@ -129,7 +129,7 @@ NODE* merge(NODE* a, NODE* b){
     return result;
 }
 
-/*  same as the middle of linked list(return the prior middle) */
+/*  Same as the middle of linked list(return the prior middle) */
 void spilitLinked(NODE **h, NODE **f, NODE **p){
     if (!(*h) || !((*h)->next)){
         *f = *h;
@@ -155,7 +155,7 @@ void spilitLinked(NODE **h, NODE **f, NODE **p){
     /* p(post) will take the post part of the linked list, which starts at slow->next */
     *p = slow->next;
     
-    /* cut the linked list in the middle */
+    /* Cut the linked list in the middle */
     slow->next = NULL;
 }
 
