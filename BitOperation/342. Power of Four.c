@@ -25,7 +25,7 @@ bool isPowerof4II(int n){
     return false;
 }
 
-/* Tricky. Power of 4 must be power of 2 and multiple of 3 */
+/* Tricky. Power of 4 must be power of 2 and (n-1) multiple of 3 */
 bool isPowerof4(int n){
     return n > 0 && !(n & (n - 1)) && (n-1)%3==0;
 }
