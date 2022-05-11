@@ -23,7 +23,7 @@ int main(){
 void reverseWordsInString(char *s){
     int len = strlen(s);
 
-    /* reverse the whole string first */
+    /* Reverse the whole string first */
     reverseString(s, len);
 
     int i = 0;
