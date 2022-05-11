@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 void howManyOneinBinary(int n){
-    /*Naive method*/
+    /* Naive method */
     int cnt = 0;
 
     while(n > 0){
@@ -13,7 +13,7 @@ void howManyOneinBinary(int n){
 }
 
 void howManyOneinBinaryII(int n){
-    /*Brian Kernighan¡¦s algorithm*/
+    /* Brian Kernighan¡¦s algorithm */
     int ans = 0;
 
     while(n > 0){
