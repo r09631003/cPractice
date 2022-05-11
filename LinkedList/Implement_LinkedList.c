@@ -8,24 +8,24 @@ struct node{
 
 typedef struct node NODE;
 
-/*tool*/
+/* Tool */
 void traverse(NODE **);
 bool isEmpty(NODE **);
 NODE *search(NODE **, int);
 
-/*delete node*/
+/* Delete node */
 void pushBack(NODE **, int);
 void pushFront(NODE **, int);
 void insertNodeByPos(NODE **, int); /*Insert by Given Address*/
 void insertNodeBySequence(NODE **, int, int); /*Insert by Nst*/
 
-/*insert node*/
+/* Insert node */
 void popBack(NODE **);
 void popFront(NODE **);
 void deleteNodeByPos(NODE **); /*Delete by Given Address*/
 void deleteNodeBySequence(NODE **, int); /*Delete by Nst*/
 
-/* create linked list by given array */
+/* Create linked list by given array */
 void create(NODE **, int *, int);
 
 
@@ -63,14 +63,14 @@ void insertNodeBySequence(NODE **h, int N, int x){
     else{
         NODE *c = *h;
 
-        N = N - 2;                      /*the pointer should stand on the n-1 node*/
+        N = N - 2;                      /* The pointer should stand on the n-1 node */
 
         while(c && N > 0){
             c = c->next;
             N--;
         }
 
-        if(!c) return;                  /*add on the 1 ~ Length + 1, if the N is greater to (Length + 1), then return */
+        if(!c) return;                  /* Add on the 1 ~ Length + 1, if the N is greater to (Length + 1), then return */
 
         NODE *n = (NODE *)malloc(sizeof(NODE));
         n->val = x;
@@ -89,14 +89,14 @@ void deleteNodeBySequence(NODE **h, int N){
     else{
         NODE *c = *h;
 
-        N = N - 2;                      /*the pointer should stand on the n-1 node*/
+        N = N - 2;                      /* The pointer should stand on the n-1 node */
 
         while(c && N > 0){
             c = c->next;
             N--;
         }
 
-        if(!c || !(c->next)) return;        /*add on the 1 ~ Length, if the N is greater to (Length), then return */
+        if(!c || !(c->next)) return;        /* Add on the 1 ~ Length, if the N is greater to (Length), then return */
 
         NODE *tmp = c->next;
         c->next = c->next->next;
